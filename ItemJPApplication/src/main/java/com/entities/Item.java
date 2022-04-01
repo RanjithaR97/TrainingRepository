@@ -1,4 +1,5 @@
 package com.entities;
+import com.operations.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,13 +7,17 @@ import javax.persistence.Id;
 import javax.persistence.PostPersist;
 import javax.persistence.Table;
 
+import org.hibernate.validator.Min;
+import org.hibernate.validator.NotNull;
+
 @Entity
 @Table(name="ItemTable")
 public class Item {
 	@Id
 	private int itemId;
-	@Column(name="Fullname")
+	@NotNull(message="Name cannot be Null")
 	private String itemName;
+	@Min(value=100)
 	@Column(name="Price")
 	private float itemPrice;
 	@Column(name="Qunatity")

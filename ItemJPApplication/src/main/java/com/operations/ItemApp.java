@@ -4,7 +4,9 @@ import com.entities.*;
 public class ItemApp {
 
 	public static void main(String[] args) {
+		
 		ItemOperations obj=new ItemOperations();
+		
 		obj.saveItem(new Item(1,"Coffee",23,10,"Bangalore"));
 		obj.saveItem(new Item(2,"Black Coffee",45,15,"Mumbai"));
 		obj.saveItem(new Item(3,"Espresso",50,19,"Mumbai"));
