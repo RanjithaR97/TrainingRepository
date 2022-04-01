@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+<bean id="citybean" class="com.beans.City">
+<property name="cityName" value="Chennai"/>
+<property name="state" value="TamilNadu"/>
+</bean>
+
+<bean id="petstorebean" class="com.beans.PetStore">
+<property name="petStoreName" value="Happy Pet PetStore"/>
+<property name="petStoreAddress" value="23 old baker street"/>
+<property name="city" ref="citybean"/>
+</bean>
+
+<bean id="ownerbean" class="com.beans.Owner">
+<property name="ownerName" value="Rodrige sum"/>
+<property name="ownerAddress" value="Mumbai"/>
+</bean>
+
+<bean id="pet1" class="com.beans.Pet">
+<constructor-arg type="java.lang.String" value="Joe"/>
+<constructor-arg type="int" value="3"/>
+<constructor-arg type="java.lang.String" value="Dog"/>
+<constructor-arg type="com.beans.Owner" ref="ownerbean"/>
+
+</bean>
+
+
+<bean id="pet2" class="com.beans.Pet">
+<property name="petName" value="Rocky"/>
+<property name="age" value="5"/>
+<property name="petType" value="Cat"/>
+</bean>
+
+<bean id="Cus1" class="com.beans.Customer">
+<property name="customerName" value="Ranjitha"/>
+<property name="customerAddress" value="Bangalore"/>
+</bean>
+</beans>
