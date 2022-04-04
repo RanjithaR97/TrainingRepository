@@ -3,6 +3,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.beans.PetStore;
 import com.beans.Pet;
+import com.beans.PetHelpLineService;
 
 
 public class PetStoreApp {
@@ -20,6 +21,8 @@ public class PetStoreApp {
 		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 		Pet pet1=context.getBean("pet1",Pet.class);
 		Pet pet2=context.getBean("pet2", Pet.class);
+		Pet pet3=context.getBean("pet3",Pet.class);
+		Pet pet4=context.getBean("pet4",Pet.class);
 		System.out.println("###########################################");
 		System.out.println(pet1.getPetName());
 		System.out.println(pet1.getPetType());
@@ -31,7 +34,18 @@ public class PetStoreApp {
 		System.out.println(pet2.getPetType());
 		System.out.println(pet2.getAge());
 		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+		System.out.println(pet3.getPetName());
+		System.out.println(pet3.getPetType());
+		System.out.println(pet3.getAge());
+		System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+		System.out.println(pet4.getPetName());
+		System.out.println(pet4.getPetType());
+		System.out.println(pet4.getAge());
 		
+		
+		
+		PetHelpLineService service=context.getBean("petHelpLine",PetHelpLineService.class);
+		System.out.println(service.getHelpLineNumber());
 
 	}
 

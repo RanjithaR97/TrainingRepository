@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd"
 >
@@ -40,5 +41,38 @@ http://www.springframework.org/schema/beans/spring-beans.xsd"
 <bean id="Cus1" class="com.beans.Customer">
 <property name="customerName" value="Ranjitha"/>
 <property name="customerAddress" value="Bangalore"/>
+</bean>
+<bean name="petHelpLine" class="com.beans.PetHelpLineService"
+factory-method="getDefaultInstance" />
+
+
+<bean id="pet3" class="com.beans.Pet" p:petName="Willy" p:age="3" p:petType="Parrot"/>
+<bean id="pet4" class="com.beans.Pet" c:petName="Chad" c:age="4"
+c:petType="Cat" c:owner-ref="ownerbean"/>
+
+
+<bean id="mypetstore" class="com.beans.PetStore">
+<property name="petStoreName" value="Good World Pet Store"/>
+<property name="petStoreAddress" value="Hellana s Street 55 Chennai"/>
+<property name="city" ref="citybean"/>
+<property name="petList">
+<list>
+<ref bean="pet1"/>
+<ref bean="pet2"/>
+<ref bean="pet3"/>
+<ref bean="pet4"/>
+
+</list>
+
+
+</property>
+<property name="volunteerDetails">
+<map>
+<entry key="v001" value="Peter Rich"/>
+<entry key="v002" value="Henry Joe"/>
+<entry key="v003" value="Sam Roe"/>
+
+</map>
+</property>
 </bean>
 </beans>

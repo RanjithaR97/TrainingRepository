@@ -1,4 +1,8 @@
 package com.beans;
+import java.util.List;
+import java.util.Map;
+
+
 
 public class PetStore {
 	private String petStoreName;
@@ -9,6 +13,26 @@ public class PetStore {
 	}
 	private City city;
 	
+	List<Pet>petList;
+	
+	Map<String,String> volunteerDetails;
+	
+
+	public Map<String,String> getVolunteerDetails() {
+		return volunteerDetails;
+	}
+
+	public void setVolunteerDetails(Map<String,String> volunteerDetails) {
+		this.volunteerDetails = volunteerDetails;
+	}
+
+	public List<Pet> getPetList() {
+		return petList;
+	}
+
+	public void setPetList(List<Pet> petList) {
+		this.petList = petList;
+	}
 
 	public City getCity() {
 		return city;
