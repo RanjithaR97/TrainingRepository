@@ -49,11 +49,6 @@ public class ItemApp {
 		item3.setItemName("Latte");
 		service.update(item3);
 		System.out.println(service.find(3).getItemName()+"for"+service.find(3).getPrice());
-		
-		
-		
-		
-
 	}
 
 }
