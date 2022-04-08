@@ -10,8 +10,8 @@ public class AppConfig {
 	@Bean
 	public Customer getCustomer() {
 		Customer c=new Customer();
-		c.setCustomerName("Peter homes");
-		c.setAddress("America");
+		c.setCustomerName("Nitin Mohulre");
+		c.setAddress("Pune");
 		return c;
 		
 	}
