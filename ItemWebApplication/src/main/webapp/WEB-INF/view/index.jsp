@@ -14,15 +14,15 @@
   <h3>Add Items in the form
   </h3>
   
-  
-   <form:form method="post" action="additem" modelAttribute="frmitem">
+  <form:form method="post" action="additem" modelAttribute="frmitem">
  <form:label path="itemName">Item Name</form:label><br/>
  <form:input  path="itemName"/><br/>
  <form:label path="price">Item Price</form:label><br/>
  <form:input path="price"/><br/>
  <input type='submit' value='save'/>
+  </form:form>
+  
  
  
- </form:form>
 </body>
 </html>
